@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
             const answers = await resolveDns(domain, record);
             results[record] = answers;
         } catch {
-            results[record] = "No record found";
+            results[record] = [];
         }
     }
 
